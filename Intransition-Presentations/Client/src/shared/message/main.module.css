@@ -1,0 +1,18 @@
+.message {
+    max-width: 400px;
+    display: flex;
+    padding-left: 15px;
+    grid-gap: 10px;
+    align-items: end;
+}
+
+.messageText {
+    height: fit-content;
+    width: fit-content;
+    margin-top: auto;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 15px;
+    font-weight: 500;
+    background: var(--main-blue-color);
+}

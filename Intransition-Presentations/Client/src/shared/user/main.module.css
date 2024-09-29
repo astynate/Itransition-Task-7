@@ -1,0 +1,37 @@
+.user {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0px 0px;
+    padding: 12px;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    grid-gap: 10px;
+}
+
+.user[state="active"] {
+    background: var(--sub-accent-color);
+}
+
+.user:hover {
+    background: var(--main-accent-color);
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    user-select: none;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-wrap: nowrap;
+}
+
+.text span:nth-child(1) {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.text span:nth-child(2) {
+    color: var(--main-paragraph-color);
+    font-size: 14px;
+}

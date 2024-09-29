@@ -1,0 +1,125 @@
+.chat {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    --height: 50px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border-left: 1px solid var(--main-border-color);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    padding: 0px 15px;
+    top: 0;
+    left: 0;
+    height: 60px;
+    background: var(--main-background-color);
+    position: sticky;
+    border-bottom: 1px solid var(--main-border-color);
+}
+
+.content {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    grid-gap: 10px;
+    margin-top: auto;
+    height: fit-content;
+    justify-content: end;
+    padding-bottom: 15px;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    grid-gap: 10px;
+}
+
+.userData {
+    display: flex;
+    flex-direction: column;
+}
+
+.left span:nth-child(1) {
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.left span:nth-child(2) {
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--main-paragraph-color);
+}
+
+.input {
+    height: auto;
+    position: sticky;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    background: var(--main-background-color);
+    border-top: 1px solid var(--main-border-color);
+    grid-gap: 10px;
+    padding: 0px 10px;
+    align-items: center;
+}
+
+.input textarea {
+    width: 100%;
+    outline: none;
+    border: none;
+    padding-left: 0px;
+    height: var(--height);
+    background: transparent;
+    font-size: 15px;
+    font-family: 'Open sans', sans-serif;
+    color: var(--main-font-color);
+    resize: none;
+    margin-top: 0px;
+    overflow-y: scroll;
+    padding-top: 13px;
+    padding-bottom: 15px;
+    margin-bottom: 0px;
+    border-radius: 0px;
+    max-height: 300px;
+    transition: 0.25s ease;
+    border: 1px solid transparent;
+}
+
+.input textarea::-webkit-scrollbar {
+    width: 0;
+}
+
+.button {
+    height: fit-content;
+    width: fit-content;
+    background: var(--sub-accent-color);
+    border-radius: 100%;
+    height: 38px;
+    width: 38px;
+    display: flex;
+    flex-shrink: 1;
+    align-items: center;
+    user-select: none;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.button img {
+    height: 17px;
+    width: 17px;
+    object-fit: contain;
+    filter: invert(100%);
+}
+
+.button:hover {
+    background: var(--main-accent-color);
+}
+
+.button:active {
+    background: var(--sub-accent-color);
+}
