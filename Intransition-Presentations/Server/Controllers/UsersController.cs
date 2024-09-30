@@ -14,6 +14,11 @@ namespace Itrantion.Server.Controllers
             _userRepository = usersRepository;
         }
 
+        public async Task<IActionResult> GetByPrefix(string prefix)
+        {
+            return Ok(await _userRepository.GetUsersByPrefix(prefix));
+        }
+
         [HttpPost]
         public async Task<IActionResult> Login([FromForm] string nickname, [FromForm] int color)
         {

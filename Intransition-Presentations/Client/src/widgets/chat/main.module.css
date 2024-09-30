@@ -55,17 +55,36 @@
     color: var(--main-paragraph-color);
 }
 
-.input {
-    height: auto;
+.inputWrapper {
     position: sticky;
     bottom: 0;
     right: 0;
+    border-top: 1px solid var(--main-border-color);
+}
+
+.input {
+    height: auto;
     display: flex;
     background: var(--main-background-color);
-    border-top: 1px solid var(--main-border-color);
     grid-gap: 10px;
-    padding: 0px 10px;
+    padding: 0px 7px;
     align-items: center;
+}
+
+.files {
+    display: flex;
+    padding-left: 10px;
+    grid-gap: 15px;
+}
+
+.file {
+    padding: 7px 15px;
+    background: var(--sub-accent-color);
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    user-select: none;
+    position: relative;
 }
 
 .input textarea {
@@ -107,6 +126,17 @@
     user-select: none;
     justify-content: center;
     cursor: pointer;
+    position: relative;
+}
+
+.button input[type="file"] {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    cursor: pointer;
+    position: absolute;
 }
 
 .button img {
@@ -122,4 +152,44 @@
 
 .button:active {
     background: var(--sub-accent-color);
+}
+
+.remove {
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    background: var(--main-accent-color);
+    cursor: pointer;
+}
+
+.remove img {
+    height: 12px;
+    width: 12px;
+    filter: invert(100%);
+}
+
+.close {
+    right: 10px;
+    top: 10px;
+    padding: 10px;
+    height: 20px;
+    width: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    background: var(--main-accent-color);
+    position: absolute;
+}
+
+.close img {
+    height: 15px;
+    width: 15px;
+    filter: invert(100%);
 }

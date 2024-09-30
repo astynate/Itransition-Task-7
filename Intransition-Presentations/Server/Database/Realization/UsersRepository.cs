@@ -13,6 +13,13 @@ namespace Itrantion.Server.Database.Realization
             _context = context;
         }
 
+        public async Task<UserModel[]> GetUsersByPrefix(string prefix)
+        {
+            return await _context.Users
+                .Where(x => x.Username.Contains(prefix))
+                .ToArrayAsync();
+        }
+
         public async Task<(string? error, UserModel? instance)> Login(string nickname, int color)
         {
             var searchUserResult = await _context.Users.FirstOrDefaultAsync(x => x.Username == nickname);

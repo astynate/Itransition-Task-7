@@ -1,6 +1,4 @@
 using Exider.Services.Middleware;
-using Instend.Server.Database.Abstraction;
-using Instend.Server.Database.Realization;
 using Itrantion.Server.Database;
 using Itrantion.Server.Database.Abstraction;
 using Itrantion.Server.Database.Realization;
@@ -18,10 +16,7 @@ builder.Services.AddCors(options =>
         .AllowCredentials());
 });
 
-builder.Services.AddScoped<IAccessHandler, AccessHandler>();
-builder.Services.AddScoped<ISlidesRepository, SlidesRepository>();
 builder.Services.AddScoped<IUsersRepository, UsersRepository>();
-builder.Services.AddScoped<IPresentationsRepository, PresentationsRepository>();
 builder.Services.AddDbContext<DatabaseContext>();
 builder.Services.AddTransient<LoggingMiddleware>();
 builder.Services.AddControllersWithViews();
